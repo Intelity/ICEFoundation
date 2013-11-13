@@ -1,8 +1,8 @@
 //
-//  NSString+Additions.h
-//  iceios
+//  NSString+ICEFoundation.h
+//  ICEFoundation
 //
-//  Created by Greg Pardo on 6/19/13.
+//  Created by Greg Pardo on 2013-06-19.
 //  Copyright (c) 2013 Intelity. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 @interface NSString (Additions)
 
--(NSString *) stringByStrippingHTML;
+- (NSString *)stringByStrippingHTML;
 
 @end

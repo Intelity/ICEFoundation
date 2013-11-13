@@ -19,6 +19,8 @@
 		DB3EC7B21832ED960019827B /* UIColor+ICEFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3EC7AF1832ED960019827B /* UIColor+ICEFoundation.m */; };
 		DB3EC7B31832ED960019827B /* UIImage+ICEFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3EC7B11832ED960019827B /* UIImage+ICEFoundation.m */; };
 		DB3EC7B51832EFAE0019827B /* UIColorICEFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3EC7B41832EFAE0019827B /* UIColorICEFoundation.m */; };
+		DB3EC7BA1833DBB60019827B /* NSDate+ICEFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3EC7B71833DBB60019827B /* NSDate+ICEFoundation.m */; };
+		DB3EC7BB1833DBB60019827B /* NSString+ICEFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3EC7B91833DBB60019827B /* NSString+ICEFoundation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		DB3EC7B01832ED960019827B /* UIImage+ICEFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ICEFoundation.h"; sourceTree = "<group>"; };
 		DB3EC7B11832ED960019827B /* UIImage+ICEFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ICEFoundation.m"; sourceTree = "<group>"; };
 		DB3EC7B41832EFAE0019827B /* UIColorICEFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIColorICEFoundation.m; path = UIKit/UIColorICEFoundation.m; sourceTree = "<group>"; };
+		DB3EC7B61833DBB60019827B /* NSDate+ICEFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ICEFoundation.h"; sourceTree = "<group>"; };
+		DB3EC7B71833DBB60019827B /* NSDate+ICEFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ICEFoundation.m"; sourceTree = "<group>"; };
+		DB3EC7B81833DBB60019827B /* NSString+ICEFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ICEFoundation.h"; sourceTree = "<group>"; };
+		DB3EC7B91833DBB60019827B /* NSString+ICEFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ICEFoundation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,10 @@
 		DB3EC7891832E6A60019827B /* ICEFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				DB3EC7B61833DBB60019827B /* NSDate+ICEFoundation.h */,
+				DB3EC7B71833DBB60019827B /* NSDate+ICEFoundation.m */,
+				DB3EC7B81833DBB60019827B /* NSString+ICEFoundation.h */,
+				DB3EC7B91833DBB60019827B /* NSString+ICEFoundation.m */,
 				DB3EC7AD1832EC730019827B /* UIKit */,
 				DB3EC78C1832E6A60019827B /* ICEFoundation.h */,
 				DB3EC78E1832E6A60019827B /* ICEFoundation.m */,
@@ -247,6 +257,8 @@
 			files = (
 				DB3EC78F1832E6A60019827B /* ICEFoundation.m in Sources */,
 				DB3EC7B31832ED960019827B /* UIImage+ICEFoundation.m in Sources */,
+				DB3EC7BA1833DBB60019827B /* NSDate+ICEFoundation.m in Sources */,
+				DB3EC7BB1833DBB60019827B /* NSString+ICEFoundation.m in Sources */,
 				DB3EC7B21832ED960019827B /* UIColor+ICEFoundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

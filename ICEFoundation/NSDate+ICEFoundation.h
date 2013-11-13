@@ -1,8 +1,8 @@
 //
-//  NSDate+Additions.h
-//  iceios
+//  NSDate+ICEFoundation.h
+//  ICEFoundation
 //
-//  Created by Greg Pardo on 7/30/13.
+//  Created by Greg Pardo on 2013-07-30.
 //  Copyright (c) 2013 Intelity. All rights reserved.
 //
 

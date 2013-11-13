@@ -1,16 +1,17 @@
 //
-//  NSString+Additions.m
-//  iceios
+//  NSString+ICEFoundation.m
+//  ICEFoundation
 //
-//  Created by Greg Pardo on 6/19/13.
+//  Created by Greg Pardo on 2013-06-19.
 //  Copyright (c) 2013 Intelity. All rights reserved.
 //
 
-#import "NSString+Additions.h"
+#import "NSString+ICEFoundation.h"
 
-@implementation NSString (Additions)
+@implementation NSString (ICEFoundation)
 
--(NSString *) stringByStrippingHTML {
+- (NSString *)stringByStrippingHTML
+{
     NSRange r;
     NSString *s = [self copy];
     while ((r = [s rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)

@@ -1,23 +1,22 @@
 //
-//  NSDate+Additions.m
-//  iceios
+//  NSDate+ICEFoundation.h
+//  ICEFoundation
 //
-//  Created by Greg Pardo on 7/30/13.
+//  Created by Greg Pardo on 2013-07-30.
 //  Copyright (c) 2013 Intelity. All rights reserved.
 //
 
-#import "NSDate+Additions.h"
+#import "NSDate+ICEFoundation.h"
 
 @implementation NSDate (Additions)
 
 - (BOOL)isBetweenDate:(NSDate *)date1
-              andDate:(NSDate *)date2 {
-    
+              andDate:(NSDate *)date2
+{
     // We don't want precision to seconds here. It seems to cause problems so we just use minutes.
     NSInteger baseTimeMinutes = [self minutesSince1970];
     NSInteger date1IntervalMinutes = [date1 minutesSince1970];
     NSInteger date2IntervalMinutes = [date2 minutesSince1970];
-    
     return (baseTimeMinutes >= date1IntervalMinutes &&
             baseTimeMinutes <= date2IntervalMinutes);
 }
