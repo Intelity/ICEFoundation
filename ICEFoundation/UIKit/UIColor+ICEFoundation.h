@@ -53,3 +53,10 @@
 - (BOOL)ice_getHue:(CGFloat *)hue saturation:(CGFloat *)saturation lightness:(CGFloat *)lightness alpha:(CGFloat *)alpha;
 
 @end
+
+/*!
+ * Mixes two colors. Accounts for alpha.
+ * @param weight should be between 0 and 1.
+ * @since 1.0.1
+ */
+UIColor* ICEColorMixColorsWeighted(UIColor *color1, UIColor *color2, CGFloat weight);
