@@ -47,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB255CC318F4942700587015 /* ICEDeviceChecks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICEDeviceChecks.h; sourceTree = "<group>"; };
 		DB3EC7841832E6A60019827B /* libICEFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libICEFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3EC7871832E6A60019827B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DB3EC78B1832E6A60019827B /* ICEFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ICEFoundation-Prefix.pch"; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 				DB3EC7AF1832ED960019827B /* UIColor+ICEFoundation.m */,
 				DB3EC7B01832ED960019827B /* UIImage+ICEFoundation.h */,
 				DB3EC7B11832ED960019827B /* UIImage+ICEFoundation.m */,
+				DB255CC318F4942700587015 /* ICEDeviceChecks.h */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -457,6 +459,7 @@
 				DB3EC7A91832E6A70019827B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB3EC7AA1832E6A70019827B /* Build configuration list for PBXNativeTarget "ICEFoundationTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +468,7 @@
 				DB3EC7AC1832E6A70019827B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
