@@ -235,18 +235,18 @@ static void RGB2HSL(CGFloat r, CGFloat g, CGFloat b, CGFloat* outH, CGFloat* out
 // Stolen from Sass's ruby implementation
 UIColor* ICEColorMixColorsWeighted(UIColor *color1, UIColor *color2, CGFloat weight)
 {
-    float p = MAX(MIN(weight, 100.f), 0.f); // clamp to 0..1
-    float w = (p * 2) - 1;
+    CGFloat p = MAX(MIN(weight, 100.f), 0.f); // clamp to 0..1
+    CGFloat w = (p * 2) - 1;
 
-    float r1, g1, b1, a1, r2, g2, b2, a2;
+    CGFloat r1, g1, b1, a1, r2, g2, b2, a2;
     [color1 getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
     [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
-    float a = a1 - a2;
+    CGFloat a = a1 - a2;
 
-    float w1 = (((w * a == -1) ? w : (w + a)/(1 + w*a)) + 1)/2.0;
-    float w2 = 1 - w1;
+    CGFloat w1 = (((w * a == -1) ? w : (w + a)/(1 + w*a)) + 1)/2.0;
+    CGFloat w2 = 1 - w1;
 
-    float red, blue, green, alpha;
+    CGFloat red, blue, green, alpha;
     red = r1*w1 + r2*w2;
     green = g1*w1 + g2*w2;
     blue = b1*w1 + b2*w2;
