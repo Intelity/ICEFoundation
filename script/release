@@ -1,0 +1,88 @@
+#!/bin/bash
+
+PRETEND="0"
+VERSION="?"
+
+if [[ $# = 0 ]]; then
+  echo "script/release VERSION [-p|--pretend]"
+  exit
+fi
+
+while [[ $# > 0 ]]
+do
+  key="$1"
+  shift
+  case $key in
+    -p|--pretend)
+    PRETEND="1"
+    ;;
+    *)
+    VERSION="$key"
+    ;;
+  esac
+done
+
+
+echo "-- Releasing ICEFoundation version $VERSION"
+
+# Check if not on master branch
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$BRANCH" != "master" ]; then
+  echo " ! You can only release from the master branch."
+  echo "   The current branch is: $BRANCH"
+  echo "   Please switch to master and try again"
+  exit 1
+fi
+
+# Check for uncommited changes, abort if dirty
+git diff-index --quiet HEAD
+if [ $? -ne 0 ]; then
+  echo " ! You have uncommited changes."
+  echo "   Please commit or stash them before releasing."
+  exit 1
+fi
+
+# Check that version is in podspec, fragile
+CHECK="$(grep -c "spec.version.*$VERSION" ICEFoundation.podspec)"
+if [ $CHECK -eq 0 ]; then
+  echo " ! Could not find spec.version = '$VERSION' in ICEFoundation.podspec"
+  echo "   Update the podspec and try again"
+  exit 1
+fi
+
+# Check for existing tag, abort if existing
+TAGS=$(git tag --contains HEAD | wc -l)
+if [ "$TAGS" -gt 0 ]; then
+  echo " ! The current commit is already tagged and is probably already released."
+  echo "   Giving up."
+  exit 1
+fi
+
+# Tag HEAD with version
+if [ $PRETEND -eq 0 ]; then
+  echo " - Creating tag $VERSION"
+  git tag "$VERSION" -m "Releasing $VERSION"
+else
+  echo " - Would create tag $VERSION, pretending."
+fi
+
+# Push commits & tag to origin
+if [ $PRETEND -eq 0 ]; then
+  echo " - Pushing commits to origin"
+  git push origin master
+  echo " - Pushing new tag to origin"
+  git push --tags origin
+else
+  echo " - Would push commits to origin, pretending."
+  echo " - Would push new tag to origin, pretending."
+fi
+
+# Push pod to intelity cocoapods repo
+if [ $PRETEND -eq 0 ]; then
+  echo " - Pushing podspec to intelity private repository"
+  pod push intelity --allow-warnings
+else
+  echo " - Would push podspec to origin, pretending."
+fi
+
+echo " - Success!"
