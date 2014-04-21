@@ -17,6 +17,7 @@
 
 + (UIImage *)imageNamed:(NSString *)name ofSize:(CGSize)size withBlock:(void (^)())drawingBlock;
 + (UIImage *)imageOfColor:(UIColor *)color;
+- (UIImage *)imageWithAlpha:(CGFloat)alpha;
 - (UIImage *)tintedImageWithColor:(UIColor *)color;
 - (UIImage *)scaleToSize:(CGSize)size;
 - (UIImage *)scaleToMaxWidth:(CGFloat)width andMaxHeight:(CGFloat)height;
