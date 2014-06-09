@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'ICEFoundation'
-  spec.version  = '0.0.6'
+  spec.version  = '0.0.7'
   spec.summary  = 'Standard toolset classes and categories'
   spec.homepage = 'https://github.com/Intelity/ICEFoundation'
   spec.authors  = { 'Andrew Smith' => 'andrew.smith@intelitycorp.com',
