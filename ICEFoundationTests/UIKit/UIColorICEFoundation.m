@@ -48,4 +48,10 @@
     XCTAssertEqualObjects(color, expectedColor, @"Color mismatch");
 }
 
+- (void)testColorWithHexWhenNil
+{
+    XCTAssertNil([UIColor ice_colorWithHex:nil], @"nil when sent nil");
+    XCTAssertNil([UIColor ice_colorWithHex:@""], @"nil when sent empty string");
+}
+
 @end

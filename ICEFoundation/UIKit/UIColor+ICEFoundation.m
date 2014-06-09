@@ -78,6 +78,9 @@ CGFloat ICEGetColorComponentFrom(NSString *string, NSInteger start, NSInteger le
             green = ICEGetColorComponentFrom(colorString, 4, 2);
             blue  = ICEGetColorComponentFrom(colorString, 6, 2);
             break;
+        case 0:
+            return nil;
+            break;
         default:
             [NSException raise:@"Invalid color value" format: @"Color value %@ is invalid.  It should be a hex value of the form #RBG, #ARGB, #RRGGBB, or #AARRGGBB", hexString];
             break;
