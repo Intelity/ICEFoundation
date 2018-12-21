@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'ICEFoundation'
-  spec.version  = '0.0.7'
+  spec.version  = '0.1.0'
   spec.summary  = 'Standard toolset classes and categories'
   spec.homepage = 'https://github.com/Intelity/ICEFoundation'
   spec.authors  = { 'Andrew Smith' => 'andrew.smith@intelitycorp.com',
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.license  = 'COMMERCIAL'
   spec.requires_arc = true
 
-  spec.platform = :ios, '6.0'
+  spec.platform = :ios, '9.0'
 
   spec.subspec 'Core' do |ss|
     ss.source_files = 'ICEFoundation/*.{h,m}'
