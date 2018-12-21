@@ -15,7 +15,7 @@
  */
 @interface UIImage (ICEKit)
 
-+ (UIImage *)imageNamed:(NSString *)name ofSize:(CGSize)size withBlock:(void (^)())drawingBlock;
++ (UIImage *)imageNamed:(NSString *)name ofSize:(CGSize)size withBlock:(void (^)(void))drawingBlock;
 + (UIImage *)imageOfColor:(UIColor *)color;
 - (UIImage *)imageWithAlpha:(CGFloat)alpha;
 - (UIImage *)tintedImageWithColor:(UIColor *)color;

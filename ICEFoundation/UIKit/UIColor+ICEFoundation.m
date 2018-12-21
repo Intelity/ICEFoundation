@@ -22,7 +22,7 @@ static void RGB2HSL(CGFloat r, CGFloat g, CGFloat b, CGFloat* outH, CGFloat* out
     }
     CGFloat hue, saturation, lightness, alpha;
     [self ice_getHue:&hue saturation:&saturation lightness:&lightness alpha:&alpha];
-    lightness = MAX(lightness - fabsf(amount), 0.0f);
+    lightness = MAX(lightness - ABS(amount), 0.0f);
     return [UIColor ice_colorWithHue:hue saturation:saturation lightness:lightness alpha:alpha];
 }
 
@@ -35,7 +35,7 @@ static void RGB2HSL(CGFloat r, CGFloat g, CGFloat b, CGFloat* outH, CGFloat* out
     }
     CGFloat hue, saturation, lightness, alpha;
     [self ice_getHue:&hue saturation:&saturation lightness:&lightness alpha:&alpha];
-    lightness = MIN(lightness + fabsf(amount), 1.0f);
+    lightness = MIN(lightness + ABS(amount), 1.0f);
     return [UIColor ice_colorWithHue:hue saturation:saturation lightness:lightness alpha:alpha];
 }
 

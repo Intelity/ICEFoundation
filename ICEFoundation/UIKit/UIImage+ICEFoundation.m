@@ -10,7 +10,7 @@
 
 @implementation UIImage (ICEKit)
 
-+ (UIImage *)imageNamed:(NSString *)name ofSize:(CGSize)size withBlock:(void (^)())drawingBlock
++ (UIImage *)imageNamed:(NSString *)name ofSize:(CGSize)size withBlock:(void (^)(void))drawingBlock
 {
     NSParameterAssert(drawingBlock);
     
